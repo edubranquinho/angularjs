@@ -12,9 +12,7 @@ angular.module('minhasDiretivas', [])
     
     
     return ddo;    
-});
-
-angular.module('minhasDiretivas', [])
+})
     .directive('minhaFoto', function(){
    
     var ddo = {
@@ -25,6 +23,19 @@ angular.module('minhasDiretivas', [])
         },
         templateUrl: 'js/directives/minha-foto.html',       
         transclude: true
+    };
+    
+    return ddo;    
+})
+    .directive('meuBotaoPerigo', function(){
+   
+    var ddo = {
+        restrict: "E",
+        scope: {
+            nome: '@',
+            acao: '&'
+        },
+        template: '<button ng-click="acao(foto)" class="btn btn-danger btn-block">{{nome}}</button>'     
     };
     
     return ddo;    
